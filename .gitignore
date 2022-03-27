@@ -1,0 +1,17 @@
+# Build
+dist
+
+# Misc
+.DS_Store
+
+# Test
+coverage
+
+# Documentation
+*.docx
+
+# Node
+node_modules
+
+# Config
+config.ts

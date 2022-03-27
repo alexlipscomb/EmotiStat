@@ -1,0 +1,44 @@
+{
+  "name": "emotistat",
+  "version": "0.1.0",
+  "description": "A Discord bot for tracking emote stats",
+  "exports": "./dist/index.js",
+  "type": "module",
+  "engines":{
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "cd ./dist && node ./index.js",
+    "build": "tsc",
+    "prebuild": "rimraf ./dist",
+    "postbuild": "copyfiles -f ./src/config.json ./dist/",
+    "deploycommands": "cd ./dist && node ./deploy-commands.js"
+  },
+  "author": "Alex Lipscomb",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.180",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.30.0",
+    "discord.js": "^13.6.0",
+    "knex": "^1.0.4",
+    "lodash": "^4.17.21",
+    "log4js": "^6.4.4"
+  }
+}
